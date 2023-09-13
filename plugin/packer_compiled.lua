@@ -84,6 +84,16 @@ _G.packer_plugins = {
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufdelete.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
+    url = "https://github.com/famiu/bufdelete.nvim"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -114,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -143,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -204,6 +224,11 @@ _G.packer_plugins = {
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/typescript.nvim",
@@ -228,6 +253,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/vscode.nvim",
     url = "https://github.com/Mofiqul/vscode.nvim"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

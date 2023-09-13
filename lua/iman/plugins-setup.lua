@@ -29,14 +29,22 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- prefered colorscheme
-	use("Mofiqul/vscode.nvim")
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restore current window
 	use("numToStr/Comment.nvim") -- commenting with gc
 	use("nvim-tree/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons") -- icons in explorer
 	use("nvim-lualine/lualine.nvim") -- status line
+
+	-- bufferline
+	use("akinsho/bufferline.nvim")
+	use("famiu/bufdelete.nvim")
+
+	-- themes
+	use("bluz71/vim-nightfly-guicolors")
+	use("Mofiqul/vscode.nvim")
+	use("shaunsingh/nord.nvim")
+	use("rebelot/kanagawa.nvim")
 
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -68,16 +76,17 @@ return packer.startup(function(use)
 	use("jayp0521/mason-null-ls.nvim")
 
 	-- treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			require("nvim-treesitter.install").update({ with_sync = true })
-		end,
-	})
+	use("nvim-treesitter/nvim-treesitter")
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+
+	-- which key
+	use("folke/which-key.nvim")
+
+	-- terminal
+	use("akinsho/toggleterm.nvim")
 
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
