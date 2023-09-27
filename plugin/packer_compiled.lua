@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/noorimannoor/.local/share/nvim/site/pack/packer/start/null-ls.nvim",

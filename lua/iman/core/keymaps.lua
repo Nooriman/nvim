@@ -18,8 +18,6 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next --[[ tab ]]
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to prev tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>k", "<Esc>:m .-2<CR>==gi")
-keymap.set("n", "<leader>l", ":BufferLineCycleNext<CR>") -- go to next tab
-keymap.set("n", "<leader>h", ":BufferLineCyclePrev<CR>") -- go to next tab
 
 -- INSERT MODE
 keymap.set("i", "jk", "<ESC>")

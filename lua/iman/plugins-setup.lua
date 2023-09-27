@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("Mofiqul/vscode.nvim")
 	use("shaunsingh/nord.nvim")
 	use("rebelot/kanagawa.nvim")
+	use("AlexvZyl/nordic.nvim")
 
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
