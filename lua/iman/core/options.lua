@@ -21,8 +21,7 @@ opt.smartcase = true
 opt.cursorline = true
 
 -- appearance
-opt.termguicolors = true
-opt.background = "dark"
+opt.termguicolors = false
 opt.signcolumn = "yes"
 
 -- backspace
@@ -36,3 +35,5 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE")

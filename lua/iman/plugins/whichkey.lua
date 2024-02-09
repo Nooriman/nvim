@@ -98,7 +98,7 @@ local mappings = {
 	b = {
 		name = "buffer",
 		n = { "<cmd>BufferLineCycleNext<cr>", "Next" },
-		p = { "<cmd>BufferLineCycleNext<cr>", "Prev" },
+		p = { "<cmd>BufferLineCyclePrev<cr>", "Prev" },
 		c = { "<cmd>BufferLinePickClose<cr>", "close" },
 	},
 
@@ -169,7 +169,7 @@ local mappings = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+		t = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
