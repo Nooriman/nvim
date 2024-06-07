@@ -78,8 +78,10 @@ return packer.startup(function(use)
 	use("jayp0521/mason-null-ls.nvim")
 
 	-- treesitter
-	use("nvim-treesitter/nvim-treesitter")
-
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
