@@ -36,6 +36,17 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons") -- icons in explorer
 	use("nvim-lualine/lualine.nvim") -- status line
 
+	use({
+		"goolord/alpha-nvim",
+		requires = {
+			"nvim-tree/nvim-web-devicons",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	})
+
 	-- bufferline
 	use("akinsho/bufferline.nvim")
 	use("famiu/bufdelete.nvim")
@@ -69,7 +80,13 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "nvimdev/lspsaga.nvim", branch = "main" })
+	use({
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+	})
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
