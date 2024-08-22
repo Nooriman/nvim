@@ -8,7 +8,7 @@ require("iman.plugins.lualine")
 require("iman.plugins.telescope")
 require("iman.plugins.nvim-cmp")
 require("iman.plugins.lsp.mason")
--- require("iman.plugins.lsp.lspsaga")
+require("iman.plugins.lsp.lspsaga")
 require("iman.plugins.lsp.lspconfig")
 require("iman.plugins.lsp.null-ls")
 require("iman.plugins.autopairs")
@@ -17,3 +17,7 @@ require("iman.plugins.gitsigns")
 require("iman.plugins.whichkey")
 require("iman.plugins.toggleterm")
 require("iman.plugins.bufferline")
+
+vim.o.foldmethod = "manual"
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99

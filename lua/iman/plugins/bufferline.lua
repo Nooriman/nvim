@@ -6,7 +6,7 @@ end
 bufferline.setup({
 	options = {
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+		-- close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
 		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
@@ -81,8 +81,8 @@ bufferline.setup({
 		},
 
 		buffer_selected = {
-			fg = { attribute = "fg", highlight = "#ff0000" },
-			bg = { attribute = "bg", highlight = "#0000ff" },
+			fg = { attribute = "fg", highlight = "TabLine" },
+			bg = { attribute = "bg", highlight = "TabLine" },
 			gui = "none",
 		},
 		buffer_visible = {
@@ -98,10 +98,10 @@ bufferline.setup({
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
 		},
-		-- close_button_selected = {
-		--   fg = {attribute='fg',highlight='TabLineSel'},
-		--   bg ={attribute='bg',highlight='TabLineSel'}
-		--   },
+		close_button_selected = {
+			fg = { attribute = "fg", highlight = "TabLineSel" },
+			bg = { attribute = "bg", highlight = "TabLineSel" },
+		},
 
 		tab_selected = {
 			fg = { attribute = "fg", highlight = "Normal" },
@@ -154,10 +154,10 @@ bufferline.setup({
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "fg", highlight = "TabLine" },
 		},
-		-- separator_visible = {
-		--   fg = {attribute='bg',highlight='TabLine'},
-		--   bg = {attribute='bg',highlight='TabLine'}
-		--   },
+		separator_visible = {
+			fg = { attribute = "bg", highlight = "TabLine" },
+			bg = { attribute = "bg", highlight = "TabLine" },
+		},
 		indicator_selected = {
 			fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
 			bg = { attribute = "bg", highlight = "Normal" },

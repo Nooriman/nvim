@@ -11,6 +11,13 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufAdd", "BufNew", "BufNewFile", "Buf
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
+	group = vim.api.nvim_create_augroup("OPEN_FOLDS", {}),
+	callback = function()
+		vim.cmd("normal! zR")
+	end,
+})
+
 treesitter.setup({
 	highlight = {
 		enable = true,
