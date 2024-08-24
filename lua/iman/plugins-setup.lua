@@ -104,6 +104,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	-- which key
+	use("echasnovski/mini.icons") -- icons in which-key
 	use("folke/which-key.nvim")
 
 	-- terminal

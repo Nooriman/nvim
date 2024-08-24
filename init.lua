@@ -18,6 +18,4 @@ require("iman.plugins.whichkey")
 require("iman.plugins.toggleterm")
 require("iman.plugins.bufferline")
 
-vim.o.foldmethod = "manual"
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
+vim.o.foldenable = false
