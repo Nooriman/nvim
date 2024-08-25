@@ -17,5 +17,6 @@ require("iman.plugins.gitsigns")
 require("iman.plugins.whichkey")
 require("iman.plugins.toggleterm")
 require("iman.plugins.bufferline")
+require("iman.plugins.alpha")
 
 vim.o.foldenable = false
