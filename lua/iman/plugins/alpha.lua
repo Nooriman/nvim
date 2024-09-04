@@ -76,17 +76,37 @@ local function pick_color()
 	return colors[math.random(#colors)]
 end
 
+local function open_project()
+	local project_dir = "~/Documents/Dev/"
+
+	-- Use Telescope to list directories in the project folder
+	require("telescope.builtin").find_files({
+		prompt_title = "Select Project",
+		cwd = project_dir,
+		find_command = { "fd", "--type", "d", "--max-depth", "1", "--exclude", ".*" },
+		attach_mappings = function(_, map)
+			map("i", "<CR>", function(prompt_bufnr)
+				local selection = require("telescope.actions.state").get_selected_entry()
+				require("telescope.actions").close(prompt_bufnr)
+				local project_path = project_dir .. selection[1]
+
+				-- Change directory to the selected project and open nvim-tree
+				vim.cmd("cd " .. project_path)
+				vim.cmd("NvimTreeToggle")
+			end)
+			return true
+		end,
+	})
+end
+
 dashboard.section.header.opts.hl = pick_color()
 -- Set menu options if desired
 dashboard.section.buttons.val = {
-	dashboard.button(
-		"o p",
-		"  Open Projects",
-		":lua require('telescope.builtin').find_files({ cwd = '~/Documents/Dev/', prompt_title = 'Open Projects' })<CR>"
-	),
+	dashboard.button("o p", "  Open Projects", ":NvimTreeToggle ~/Documents/Dev<CR>"),
 	dashboard.button("l s", "  Load Session", ":source ~/.config/nvim/sessions/<PROJECT_NAME>.vim<CR>"),
 	dashboard.button("t", "  Terminal", ":ToggleTerm<CR>"),
-	dashboard.button("c", "  NVIM Config", ":e ~/.config/nvim/init.lua<CR>"),
+	-- dashboard.button("c", "  NVIM Config", ":e ~/.config/nvim/init.lua<CR>"),
+	dashboard.button("c", "  NVIM Config", ":NvimTreeToggle ~/.config/nvim<CR>"),
 	dashboard.button("q", "  Quit", ":qa<CR>"),
 }
 
