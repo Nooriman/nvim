@@ -34,6 +34,8 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+opt.foldmethod = "manual"
+
 opt.iskeyword:append("-")
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")

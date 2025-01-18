@@ -9,10 +9,16 @@ local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-    sources = {
-        formatting.prettier,
-        formatting.stylua,
-        diagnostics.eslint_d
+      sources = {
+        formatting.prettier.with({
+            filetypes = { "javascript", "typescript", "html", "css", "json" },
+        }),
+        formatting.stylua.with({
+            filetypes = { "lua" },
+        }),
+        diagnostics.eslint_d.with({
+            filetypes = { "javascript", "typescript" },
+        }),
     },
     -- configure format on save
     on_attach = function(current_client, bufnr)

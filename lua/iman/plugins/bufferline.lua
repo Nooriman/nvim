@@ -7,8 +7,8 @@ bufferline.setup({
 	options = {
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 		-- close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-		left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
+		-- right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+		-- left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
 		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
 		-- NOTE: this plugin is designed with this icon in mind,
 		-- and so changing this is NOT recommended, this is intended
@@ -35,9 +35,10 @@ bufferline.setup({
 		tab_size = 21,
 		diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
 		diagnostics_update_in_insert = false,
-		-- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-		--   return "("..count..")"
-		-- end,
+  diagnostics_indicator = function(count, level, diagnostics_dict, context)
+    local icon = level:match("error") and " " or " "
+    return " " .. icon .. count
+  end,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
 		-- custom_filter = function(buf_number)
 		--   -- filter out filetypes you don't want to see

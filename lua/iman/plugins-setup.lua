@@ -35,7 +35,6 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons") -- icons in explorer
 	use("nvim-lualine/lualine.nvim") -- status line
-
 	use({
 		"goolord/alpha-nvim",
 		requires = {
@@ -46,6 +45,10 @@ return packer.startup(function(use)
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
 	})
+use {
+  'jedrzejboczar/possession.nvim',
+  requires = { 'nvim-lua/plenary.nvim' } -- Ensure plenary.nvim is also installed
+}
 
 	-- bufferline
 	use("akinsho/bufferline.nvim")
@@ -115,4 +118,12 @@ return packer.startup(function(use)
 	if packer_bootstrap then
 		require("packer").sync()
 	end
+
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+})
 end)
