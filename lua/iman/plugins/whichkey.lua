@@ -73,6 +73,8 @@ local setup = {
 -- MAPPING
 which_key.add({
 
+  {"<leader>K", "<cmd>kill-session<cr>", desc="Kill Session", nowait = true, remap = false},
+
   -- BUFFERS
   {
     "<leader>B",
