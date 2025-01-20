@@ -17,6 +17,7 @@ telescope.setup({
 				["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 			},
 		},
+    file_ignore_patterns = {"node_modules/"},
 	},
 	-- pickers = {
 	-- 	find_files = {
