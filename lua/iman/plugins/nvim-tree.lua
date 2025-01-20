@@ -15,4 +15,11 @@ nvimtree.setup({
 			},
 		},
 	},
+  filters = {
+    dotfiles = false,
+    custom = {},
+  },
+  git = {
+    ignore = false,
+  },
 })
