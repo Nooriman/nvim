@@ -15,12 +15,13 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
 	callback = function() end,
 })
 
+require('nvim-ts-autotag').setup();
+
 treesitter.setup({
 	highlight = {
 		enable = true,
 	},
 	indent = { enable = true },
-	autotag = { enable = true },
 	ensure_installed = {
 		"json",
 		"javascript",

@@ -104,7 +104,12 @@ use {
 	})
 	-- auto closing
 	use("windwp/nvim-autopairs")
-	use("windwp/nvim-ts-autotag")
+ use {
+  "windwp/nvim-ts-autotag",
+  config = function()
+    require("nvim-ts-autotag").setup()
+  end
+}
 
 	-- which key
 	use("echasnovski/mini.icons") -- icons in which-key
